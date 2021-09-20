@@ -35,6 +35,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        parent::boot();
+        require(base_path('routes/botman.php'));
         $this->configureRateLimiting();
 
         $this->routes(function () {
